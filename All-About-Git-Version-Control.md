@@ -1,6 +1,7 @@
 # First Time Git Configuration
 
-Before you can start using Git, you need to configure it. Run each of the following lines on the command line to make sure everything is set up.
+Before you can start using Git, you need to configure it. 
+Run each of the following lines on the command line to make sure everything is set up.
 
 
 ## sets up Git with your name
