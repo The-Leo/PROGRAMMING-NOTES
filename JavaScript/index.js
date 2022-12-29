@@ -25,9 +25,7 @@ var myName = 'Leonard';
 let age = 28;
 const email = 'odoi.leonard1@gmail.com';
 
-// The preferred ways are "let" and "const"
-
-
+// The preferred ways are "let" and "const". "var" might give problems in the future
 
 
 
@@ -37,8 +35,59 @@ const email = 'odoi.leonard1@gmail.com';
 let myFirstName = 'Leo'; // String Literal
 let myAge = 28; // Number
 let isMale = true; //Boolean
-let myLastNmae = undefined; 
+let myLastName = undefined; 
 let myHomeTown = null;
+
+
+// String Concatenation
+// The first way of concatenating strings is by using the plus(+) sign
+console.log("Hello," + " New York City");
+
+//Template String - instead of using quotes, template strings use backticks
+// Use ${} in place of any variable
+console.log(`My first name is ${myFirstName}. I am ${myAge}.`);
+
+// String indexing
+const quote1 = "The future belongs to those who believer in the beauty of their dreams.";
+console.log(quote1[4]);
+
+// Alternatively, you can use the string's charAt() to index
+console.log(quote1.length);
+console.log(quote1.charAt(4));
+console.log(quote1.charAt(12));
+console.log(quote1.charAt(70));
+
+// Escaping special characters -  you can use the backslash to escape special characters
+console.log('I want to escape this \'. I\'m male')
+// You don't have to memorize these special characters but here are a few / " ' 
+
+
+
+// Quiz - Converting Celsius to Fahrenheit
+const celsius = 30;
+const fahrenheit = celsius * 1.8+32;
+console.log(fahrenheit);
+
+
+/*Implicit Type Coercion
+JavaScript is a loosely typed language. Basically, this means that when you’re 
+writing JavaScript code, you do not need to specify data types. 
+Instead, when your code is interpreted by the JavaScript engine it will automatically 
+be converted into the "appropriate" data type. This is called implicit type coercion. 
+*/
+console.log('julia' + 1);
+/* In this example, JavaScript takes the string "julia" and adds the number 1 to it 
+resulting in the string "julia1". 
+*/
+
+/* Strict Equality
+In JavaScript it’s better to use strict equality to see if numbers, 
+strings, or booleans, etc. are identical in type and value without doing the 
+type conversion first. To perform a strict comparison, simply add an additional 
+equals sign = to the end of the == and != operators.
+*/
+console.log('1'===1); //returns false
+console.log('1'==1); // returns true - type conversions occurs
 
 
 /* Reference Data Types are as follows: 
@@ -78,6 +127,7 @@ console.log(person.email)
 
 console.log(person.address);
 
+
 // to DE-STRUCTURE the object and create variables out of the keys
 const { firstName, address: {city} } = person;
 console.log(firstName);
@@ -111,8 +161,58 @@ console.log(todos[1].text);
 const todosJSON = JSON.stringify(todos);
 console.log(todosJSON);
 
+// ARRAYS - a data structure that we use to refer to a list of items
+let selectedColors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+console.log(selectedColors);
+console.log(selectedColors[4]);
+
+// You can push new items into the Array
+selectedColors.push('cyan');
+console.log(selectedColors);
+
+// You can push new items to the beginning of the Array
+selectedColors.unshift('magenta');
+console.log(selectedColors);
+
+// You can delete the last item in the Array by:
+console.log(selectedColors.pop()); 
+console.log(selectedColors);
+
+// To check if an item is in the array
+console.log(Array.isArray('yellow'));
+
+// To know the index of an item
+console.log(selectedColors.indexOf('indigo'));
+
+// Different data types can be stored in an array though
+const randomList = ['1', 'farm', true, 12, 'mango', 1, undefined, null];
+console.log(randomList);
+
+
+
+// FUNCTIONS
+// A function performs a task or calculates a value 
+function greet() {
+    console.log('Hello World!');
+}
+greet();
+
+
+// function greet(parameter){
+//     console.log('Hello' + parameter);
+// }
+// greet(argument);
+
+function shout(firstName){
+    console.log('Hey' + firstName);
+}  
+shout(leonard);
+
+
 
 // For Loop
+
+
 
 
 
