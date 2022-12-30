@@ -203,10 +203,10 @@ greet();
 // }
 // greet(argument);
 
-function shout(firstName){
-    console.log('Hey' + firstName);
-}  
-shout(leonard);
+// function shout(firstName){
+//     console.log('Hey' + firstName);
+// }  
+// shout(leonard);
 
 
 
@@ -217,3 +217,73 @@ shout(leonard);
 
 
 //While Loop
+
+
+
+//ARITHMETIC OPERATORS
+let x = 10;
+let y = 3;
+
+console.log(x+y); //addition
+console.log(x-y); //subtraction
+console.log(x*y); //multiplication
+console.log(x/y); // division
+console.log(x%y); //remainder of division
+console.log(x**y); //exponentiation
+
+//Increment Operators
+console.log(++x);
+console.log(x++);
+console.log(x);
+
+
+//Decrement Operators
+console.log(x--);
+console.log(x);
+
+
+//ASSIGNMENT OPERATOR
+z=10;
+w=10;
+a=10;
+b=10;
+c=10;
+z += 5;
+console.log(z);
+console.log(z*=5);
+console.log(z*=5);
+console.log(w-=5);
+console.log(a/=5);
+console.log(b%=5);
+console.log(c**=5);
+
+//COMPARISON OPERATORS - the result of comparison operators is a boolean
+d = 5;
+console.log(d>0);
+console.log(d>=0);
+console.log(d<0);
+console.log(d<=0);
+
+//Strict Equality operators (Same Type and Value)
+console.log(d === 5);
+console.log(d !== 5);
+
+console.log(1 === 1); // this will evaluate to true
+console.log('1' === 1); // this will evaluate to false because they are different types
+
+//Lose Equality Operator (only checks the value, after converting the other to the same type)
+console.log(1==1);
+console.log('1'==1); //this will stil evaluate to true
+
+//TERNARY OPERATORS - This is a conditional operator. Assuming we wanted to set a customer to gold if their 
+//point is greater than 100
+
+let points = 90;
+let typeCustomer = points > 100 ? 'gold' : 'silver';
+console.log(typeCustomer);
+
+
+
+
+
+
