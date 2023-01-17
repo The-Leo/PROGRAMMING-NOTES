@@ -209,17 +209,6 @@ greet();
 // shout(leonard);
 
 
-
-// For Loop
-
-
-
-
-
-//While Loop
-
-
-
 //ARITHMETIC OPERATORS
 let x = 10;
 let y = 3;
@@ -250,7 +239,7 @@ b=10;
 c=10;
 z += 5;
 console.log(z);
-console.log(z*=5);
+console.log(z+=5);
 console.log(z*=5);
 console.log(w-=5);
 console.log(a/=5);
@@ -282,8 +271,62 @@ let points = 90;
 let typeCustomer = points > 100 ? 'gold' : 'silver';
 console.log(typeCustomer);
 
+//LOGICAL OPERATORS
+//Logical AND (&&) - This returns true if both operands are true
+console.log(true && true);
+
+//A real world scenario of one were to apply for a loan. 
+let highIncome = true;
+let goodCreditScore = true;
+let eligibleForLoan = highIncome && goodCreditScore;
+console.log(eligibleForLoan);
+
+//Logical OR (||)
+// This returns true if just one of the operands are true
+let Income = true;
+let CreditScore = false;
+let eligibleLoan = Income || CreditScore;
+console.log(eligibleLoan);
+
+//NOT Operator - this negates a boolean
+let applicationRefused = !eligibleForLoan;
+console.log('eligible', eligibleForLoan);
+console.log('application refused', applicationRefused);
 
 
+// //CONTROL FLOW
+// In JavaScript, there are two types of conditional statements;
+// if ... else
+// switch ... case
 
+/*IF ELSE
+Assuming we wanted to greet a user with 'good morning' or 'good evening' 
+depending on the hour
+if hour is between 6am and 12pm, good morning! 
+if hour is between 12pm and 6pm, good evening!
+otherwise; good evening
+*/
 
+/* if (condition){
+    statement
+}
+else if (anotherCondition){
+    statement
+}
+else if (yetAnotherCondition){ // we can have as many conditions as we want. There is no limitation! 
+    statement
+}
+else
+statement
+*/
 
+let hour = 20;
+if(hour >= 6 && hour <= 12) {
+    console.log('Good Morning!');
+}
+else if(hour >= 12 && hour <= 18){
+    console.log('Good Afternoon!');
+}
+else {
+    console.log('Good Evening');
+}
