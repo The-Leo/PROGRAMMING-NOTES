@@ -3,11 +3,12 @@ In C, data types are used to define the type of data that a variable can hold.
 **Basic Data Types**: Integers and Floating point numbers, characters
 
 ## BASIC DATA TYPES
-**Integers**: Integers represent whole numbers without any fractional part. C provides various integer data types with different storage sizes, including:
-	- int** Used to store integers with a typical size of 4 bytes.
-	- short: Used to store smaller integers with a typical size of 2 bytes.
-	- long: Used to store larger integers with a typical size of 4 bytes or 8 bytes.
-	- char: Used to store single characters, which are actually small integers.
+**Integers**: Integers represent whole numbers without any fractional part. 
+C provides various integer data types with different storage sizes, including:
+	* int: Used to store integers with a typical size of 4 bytes.
+	* short: Used to store smaller integers with a typical size of 2 bytes.
+	* long: Used to store larger integers with a typical size of 4 bytes or 8 bytes.
+	* char: Used to store single characters, which are actually small integers.
 
 ![data_types](images/data-types.jpg)
 
