@@ -9,6 +9,10 @@ In C, data types are used to define the type of data that a variable can hold.
 	- long: Used to store larger integers with a typical size of 4 bytes or 8 bytes.
 	- char: Used to store single characters, which are actually small integers.
 
+![data_types](images/data-types.jpg)
+
+
+
 
 **Floating-Point Numbers**: Floating-point data types are used to represent numbers with fractional parts. C provides two primary floating-point types:
 	- float: Used to store single-precision floating-point numbers with a typical size of 4 bytes.
