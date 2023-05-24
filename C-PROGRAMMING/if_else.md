@@ -84,3 +84,46 @@ printf("Sorry, you are not eligible to vote");
     return (0);
 }
 ```
+
+
+## An examples of a nested if-else statements that checks if a user can drive
+
+```c
+#include <stdio.h>
+
+/** A program that checks if a user can drive based on age and driver's licence
+*Return: 0
+*/
+
+int main(){
+    int age;
+    int license;
+    printf("Please enter your age: ");
+    scanf("%d", &age);
+
+    if(age<=0){
+      printf("Age cannot be zero or a negative number! Exiting the program \n");
+    return 0;
+    }
+    
+    printf("Do you have a driver's license? (Enter 0 for No and 1 for Yes) ");
+    scanf("%d", &license);
+    
+
+    if(age >= 18){
+        printf("You are eligible to drive\n");
+
+        if(license == 1){
+        printf("You have a driver's license - You can drive safely\n");
+        }
+        else{
+        printf("You are eligible but do not possess a driver's license - You cannot drive\n");
+        }
+    }
+    else{
+        printf("Sorry, you are not eligible to drive \n");
+    }
+
+    return (0);
+}
+```
