@@ -15,4 +15,10 @@ Here, you will find notes on:
 Don't hesitate to fork or clone. 
 I have named the files according to their content for easy identification. 
 You are welcome to contribute! 
+
+## RULES FOR CONTRIBUTING
+- Fork the repository
+- Push your commits to a new branch in your own version of the repo
+- Create a pull request
+
 Enjoy! 
