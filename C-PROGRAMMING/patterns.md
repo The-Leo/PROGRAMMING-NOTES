@@ -1,12 +1,12 @@
 # PRINT THESE PATTERNS USING LOOPS
-
-1. ```
+## Pattern number 1
+```
     *****
     *****
     *****
     *****
     *****
-    ```
+```
 ## For this pattern, we can use a nested for loop as follows
 The trick is to print the outer loop the number of times there are rows. 
 Then the inner loop handles the columns. 
@@ -63,22 +63,44 @@ int main(){
 
     return 0; 
 }
+```
 
-
-
-3.  *****
+## Pattern number 3
+```
+    *****
     ****
     ***
     **
     *
+```
+To print out pattern with loops, it is important to figure out the relationship between the rows and columns. For the pattern above, _(column = n+1-row)_, where n is the number of iterations of the outer loop. 
 
+```c
+#include <stdio.h>
 
-4.  1
+int main(){
+    int row, column;
+    char symbol = '*';
+
+    for(row=1; row<=5; row++){
+        for(column=1; column<=5+1-row; column++){
+            printf("%c", symbol);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+```
+
+## Pattern Number 4
+
+```
+    1
     1 2
     1 2 3
     1 2 3 4
     1 2 3 4 5
-
+```
 
 5.  *
     **
@@ -175,3 +197,4 @@ int main(){
           1   2   1
         1   3   3   1
       1   4   6   4   1
+```
