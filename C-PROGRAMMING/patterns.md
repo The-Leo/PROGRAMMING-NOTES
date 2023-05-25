@@ -1,10 +1,12 @@
 # PRINT THESE PATTERNS USING LOOPS
 
-1.  *****
+1. ```
     *****
     *****
     *****
     *****
+    *****
+    ```
 ## For this pattern, we can use a nested for loop as follows
 The trick is to print the outer loop the number of times there are rows. 
 Then the inner loop handles the columns. 
