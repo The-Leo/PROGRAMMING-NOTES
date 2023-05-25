@@ -11,6 +11,7 @@
 The trick is to print the outer loop the number of times there are rows. 
 Then the inner loop handles the columns. 
 For a block pattern as the one above, you will iterate the outer loop the same number of times as the inner loop. 
+The Outer loop prints a new line. 
 
 ```c
 #include <stdio.h> //preprocessor directive
@@ -32,7 +33,7 @@ For a block pattern as the one above, you will iterate the outer loop the same n
 ```
 
 2. ```
-     *
+    *
     **
     ***
     ****
