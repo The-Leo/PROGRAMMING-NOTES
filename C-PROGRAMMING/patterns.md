@@ -32,13 +32,39 @@ The Outer loop prints a new line.
     }
 ```
 
-2. ```
+
+## Pattern number 2
+```
     *
     **
     ***
     ****
     *****
 ```
+To solve the pattern above, we can again use a nested for loop. 
+There are 5 rows, meaning the outer loop will run 5 times. 
+We can also see that the number or stars for each row is equal to the number of columns. Eg. For row 1, there is 1 column. For row 2 there are 2 columns, for row 3, there are 3 columns, etc. 
+This means that for the inner loop, row = column. 
+
+```c
+include <stdio.h>
+
+int main(){
+    char symbol = '*';
+    int row;
+    int column;
+
+    for(row=1; row<=5; row++){
+        for(column=1; column=row; column++){
+            printf("%c", symbol);
+        }
+        print("\n");
+    }
+
+    return 0; 
+}
+
+
 
 3.  *****
     ****
