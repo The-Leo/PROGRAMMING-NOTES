@@ -31,12 +31,13 @@ For a block pattern as the one above, you will iterate the outer loop the same n
     }
 ```
 
-2.  *
+2. ```
+     *
     **
     ***
     ****
     *****
-
+```
 
 3.  *****
     ****
