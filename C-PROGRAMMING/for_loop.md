@@ -54,3 +54,8 @@ for loops are commonly used in various situations where you know the number of i
 **Looping with a specific step**: for loops allow you to specify a step size for the loop variable. This can be useful in situations where you need to iterate through a sequence of numbers with a specific increment or decrement.
 
 **Counting loops**: for loops are often used as counting loops, where the loop variable is incremented or decremented in a controlled manner. These loops are useful for executing a block of code a specific number of times.
+
+
+# NESTED FOR LOOP
+A nested for loop is a programming construct where one for loop is nested inside another for loop. 
+This means that the __inner loop__ is placed inside the body of the __outer loop__. The nested for loop allows for repeated execution of a block of code within the inner loop for each iteration of the outer loop.
