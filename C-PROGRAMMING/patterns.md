@@ -101,6 +101,22 @@ int main(){
     1 2 3 4
     1 2 3 4 5
 ```
+```c
+int main (){
+    int row;
+    int column;
+    char symbol = '*';
+    for(row=1; row<=5; row++){
+        for(column=1; column<=row; column++){
+            printf("%d ", column);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+```
+
 
 ## Pattern Number 5
 ```
@@ -114,6 +130,23 @@ int main(){
     **
     *
 ```
+
+```
+int main (){
+    int row;
+    int column;
+    char symbol = '*';
+    for(row=0; row<10; row++){
+        for(column=0; column<(row > 5 ? 10-row : row); column++){
+            printf("%c ", symbol);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+```
+
 
 ## Pattern Number 6
 ```
