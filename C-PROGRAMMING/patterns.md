@@ -258,3 +258,39 @@ int main (){
         1   3   3   1
       1   4   6   4   1
 ```
+## Pattern Number 18
+
+```
+         *
+        * *
+       * * *
+      * * * *
+     * * * * *
+      * * * *
+       * * *
+        * *
+         *
+```
+```c
+int main (){
+    int row;
+    int column;
+    char symbol = '*';
+    char space = ' ';
+    for(row=0; row<10; row++){
+
+        int totalColumnsInRows = row > 5 ? 10-row : row;
+        int noSpaces = 5 - totalColumnsInRows; 
+
+        for(space=0; space<noSpaces; space++){
+            printf(" ");
+        }
+        for(column=0; column<totalColumnsInRows; column++){
+            printf("%c ", symbol);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+```
