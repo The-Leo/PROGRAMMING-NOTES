@@ -130,8 +130,11 @@ int main (){
     **
     *
 ```
+The inner loop of this pattern contains a ternary statement. If the row is <= 5, then column = row. Else column = 10-row. 
+So, the ternary statement is as follows: 
+```row>5 ? 10-row : row```
 
-```
+```c
 int main (){
     int row;
     int column;
