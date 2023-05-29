@@ -59,3 +59,24 @@ for loops are commonly used in various situations where you know the number of i
 # NESTED FOR LOOP
 A nested for loop is a programming construct where one for loop is nested inside another for loop. 
 This means that the __inner loop__ is placed inside the body of the __outer loop__. The nested for loop allows for repeated execution of a block of code within the inner loop for each iteration of the outer loop.
+
+
+This block of code represents a nested for loop that prints a pattern. 
+```C
+#include <stdio.h> //preprocessor directive
+
+    int main(){     //entry point
+        char symbol = '*';
+        int row;
+        int column;
+
+// nested for loop
+        for(row=1; row<=5; row++){
+            for(column=1; column<=5; column++){
+                printf("%c", symbol);
+            }
+            printf("\n");
+        }
+        return 0;
+    }
+```
