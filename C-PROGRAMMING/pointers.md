@@ -3,19 +3,21 @@
 Pointers are variables that store the memory addresses of other variables in a programming language. They allow you to manipulate and access data indirectly by pointing to the memory location where the data is stored. 
 Pointers are particularly useful for tasks like dynamic memory allocation, passing data by reference, and working with complex data structures. 
 
-```
+```C
 int *ptr;  // Declaration of an integer pointer named ptr
 ```
 
 To assign a value to a pointer, you need to obtain the memory address of a variable using the ampersand (&) operator. Here's an example:
-```
+
+```C
 int num = 42;
 int *ptr = &num; // Assigns the address of num to the pointer ptr
 ```
 
 ## DEREFERENCING
 To access the value stored at the memory location pointed by a pointer, you can use the asterisk (*) operator again. This is known as dereferencing the pointer. Here's an example:
-```
+
+```C
 int num = 42;
 int *ptr = &num;
 printf("%d\n", *ptr); // Prints the value stored at the memory location pointed by ptr (42)
@@ -25,7 +27,7 @@ printf("%d\n", *ptr); // Prints the value stored at the memory location pointed 
 ## MODIFY THE VALUE OF A VARIABLE USING POINTERS
 You can also modify the value of a variable indirectly using a pointer. Here's an example:
 
-```
+```C
 int num = 42;
 int *ptr = &num;
 
@@ -68,7 +70,7 @@ In programming, a pointer stores the memory address of another variable. By dere
 
 To dereference a pointer, you use the asterisk (*) operator. The asterisk is used both for declaring a pointer and for dereferencing it, which can be a source of confusion. However, when used in an expression or statement, the asterisk serves as the dereference operator.
 
-```
+```C
 int num = 42; // Declare an integer variable
 
 int *ptr = &num; // Declare a pointer and assign the address of num to it
@@ -85,7 +87,7 @@ A pointer to a function is a variable that stores the memory address of a functi
 
 Here's an example to illustrate how a pointer to a function works:
 
-```
+```C
 #include <stdio.h>
 
 // Function declaration
@@ -113,7 +115,7 @@ In C, you can pass a function as an argument to another function by using functi
 
 Here's an example that demonstrates how to pass a function as an argument using pointers:
 
-```
+```C
 #include <stdio.h>
 
 // Function with a function pointer as an argument
@@ -140,5 +142,27 @@ int main()
     performOperation(5, 3, subtract); // Output: Result: 2
 
 return 0;
+}
+```
+
+
+## TYPE CASTING A VOID POINTER
+__Void Pointer (void*):__ A void* pointer, often called a _"generic pointer_," is a special pointer type that can point to an object of any type. It represents a memory address without specifying the type of the object at that address. This allows for greater flexibility in handling pointers to data of different types. However, when using a void* pointer, explicit type casting is required to access or manipulate the actual data.
+
+#include <stdio.h>
+
+```C
+int main(){
+
+    void *ptr;
+    int num = 14;
+    
+    ptr = &num;
+
+
+    int* PPtr = (int*)(ptr);
+    printf("%d\n", *PPtr);
+
+    return 0;
 }
 ```
