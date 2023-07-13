@@ -166,3 +166,107 @@ int main(){
     return 0;
 }
 ```
+
+
+
+## POINTER ARITHMETIC
+Pointer arithmetic in C allows you to perform arithmetic operations on pointers. When you perform arithmetic on a pointer, the compiler adjusts the pointer's address based on the size of the data type it points to. Here are the key aspects of pointer arithmetic:
+
+**Incrementing a Pointer:**
+When you increment a pointer using the ++ operator, the pointer advances to the next element of the type it points to. The amount of increment depends on the size of the underlying data type.
+For example, if you have a pointer ptr of type int* and you increment it (ptr++), it moves to the next memory location that can hold an int.
+
+**Decrementing a Pointer:**
+Similarly, when you decrement a pointer using the -- operator, the pointer moves to the previous element of the type it points to.
+For example, if you have a pointer ptr of type float* and you decrement it (ptr--), it moves to the previous memory location that can hold a float.
+
+**Pointer Arithmetic with Integral Values:**
+You can also perform arithmetic operations on pointers using integral values (e.g., integers).
+When you add an integer value n to a pointer, the pointer moves n elements ahead of the type it points to. Similarly, when you subtract an integer value n, the pointer moves n elements backward.
+The amount of movement is scaled based on the size of the underlying data type.
+For example, if you have a pointer ptr of type char* and you add an integer n to it (ptr + n), the pointer moves n memory locations ahead, where each location can hold a char.
+
+**Pointer Subtraction:**
+Subtracting two pointers of the same type gives you the number of elements (not bytes) between the two pointers.
+The result of subtracting two pointers is of type ptrdiff_t, which represents the signed integer difference between the memory addresses.
+For example, if you have two pointers ptr1 and ptr2 of type double*, ptr2 - ptr1 gives you the number of double elements between the two pointers.
+It's important to note that pointer arithmetic is only valid within the bounds of an allocated memory block. Attempting to access or perform arithmetic beyond the allocated memory block can lead to undefined behavior.
+
+Pointer arithmetic is particularly useful when working with arrays, iterating over data structures, and implementing algorithms that involve sequential or indexed data access.
+
+
+## Pointer to Pointer
+A pointer to pointer, also known as a double pointer, is a type of pointer in C and C that holds the memory address of another pointer. In other words, it is a variable that stores the address of a pointer variable.
+
+The purpose of a pointer to pointer is to provide an additional level of indirection, allowing you to indirectly access and modify the value of a pointer.
+
+Here's an example to illustrate the concept of a pointer to pointer: 
+```c
+#include <stdio.h>
+
+int main() {
+    int num = 42;
+    int* ptr = &num;
+    int** ptrToPtr = &ptr;
+
+    printf("Value of num: %d\n", num);                 // Output: Value of num: 42
+    printf("Value of *ptr: %d\n", *ptr);               // Output: Value of *ptr: 42
+    printf("Value of **ptrToPtr: %d\n", **ptrToPtr);   // Output: Value of **ptrToPtr: 42
+
+    return 0;
+}
+```
+
+```int num = 42;```: An integer variable num is declared and assigned the value 42.
+
+```int* ptr = &num;```: A pointer variable ptr is declared and assigned the address of num using the & operator. This means ptr now points to num.
+
+```int** ptrToPtr = &ptr;```: A pointer to pointer variable ptrToPtr is declared and assigned the address of ptr using the & operator. This means ptrToPtr holds the address of the pointer ptr.
+
+The printf statements demonstrate the indirections possible with the pointer to pointer:
+
+*ptr dereferences ptr to access the value stored at the memory location it points to, which is the value of num.
+**ptrToPtr dereferences ptrToPtr to obtain the address of ptr, and then dereferences ptr to access the value stored at the memory location it points to, which is again the value of num.
+Pointer to pointers are particularly useful when you need to modify a pointer itself, for example, when passing a pointer by reference to a function or when dynamically allocating memory for a pointer.
+
+
+
+## ARRAY OF POINTERS
+An array of pointers is an array in which each element is a pointer. Instead of storing values directly, it stores memory addresses pointing to other objects or data. This allows for more flexible and dynamic data structures.
+
+Here's an example to illustrate an array of pointers:
+```c
+#include <stdio.h>
+
+int main() {
+    int num1 = 10;
+    int num2 = 20;
+    int num3 = 30;
+
+    // Array of pointers to integers
+    int* arr[3];
+
+    // Assign addresses of integers to array elements
+    arr[0] = &num1;
+    arr[1] = &num2;
+    arr[2] = &num3;
+
+    // Access and print values through array elements
+    printf("Value at arr[0]: %d\n", *arr[0]);  // Output: Value at arr[0]: 10
+    printf("Value at arr[1]: %d\n", *arr[1]);  // Output: Value at arr[1]: 20
+    printf("Value at arr[2]: %d\n", *arr[2]);  // Output: Value at arr[2]: 30
+
+    return 0;
+}
+```
+
+
+Integer variables num1, num2, and num3 are declared and assigned different values.
+
+An array of pointers to integers int* arr[3]; is declared with three elements.
+
+The addresses of the integer variables are assigned to the array elements using the assignment operator (=). For example, arr[0] = &num1; assigns the address of num1 to the first element of the array.
+
+The values of the integers are accessed and printed through the array elements using the dereference operator (*). For example, *arr[0] dereferences the first element of the array to access the value stored at the corresponding memory address.
+
+An array of pointers can be useful in various scenarios, such as when creating dynamic data structures, managing lists or collections of objects, or implementing multi-dimensional arrays. It allows for greater flexibility in storing and accessing data indirectly through pointers.
