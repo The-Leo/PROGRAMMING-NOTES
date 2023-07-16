@@ -23,3 +23,59 @@ fgets(name, sizeof(name), stdin);
 
 ```
 
+HOW TO INITIALIZE A STRING AT RUN TIME
+
+GETS AND SCANF(ACCEPTING INPUT)
+SCANF
+```
+char name[30];
+printf("Please enter your name: ");
+scanf("%s", name);
+```
+With the code above, if you enter a double word, the function will not recognize a white space. 
+That is one draw back if the scanf function. 
+
+To overcome this we can use the gets() function. 
+GETS
+```
+char name[];
+printf("Please enter your name: ");
+gets(name);
+printf("%s", name);
+
+```
+
+The draw back for this as well is a buffer overflow. 
+It does not check the buffer size before printing the string. It goes ahead to print any number of characters no matter the buffer size indicated. And this can be risky since it can overwrite data in another memory location. 
+
+This option will only print a specified number of characters due to the width indicator. 
+```
+int main(){
+    char name[5];
+    printf("Please enter your name: ");
+    scanf("%3s", name);
+    printf("%s\n", name);
+    return 0;
+}
+```
+
+To use the printf function to reduce the number of character, such is the way:
+```
+int main(){
+    char name[30];
+    printf("Please enter your name: ");
+    scanf("%s", name);
+    printf("%.3s\n", name);
+    return 0;
+}
+```
+
+
+PUTS
+This prints a string with a new line. 
+```
+char name[30];
+printf("please enter your name");
+scanf("%s", name);
+puts(name); // this will print string with a new line
+```
