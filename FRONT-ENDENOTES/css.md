@@ -148,4 +148,5 @@ The CSS Box Model is a fundamental concept in web design and layout. It defines 
 - Margin is the space between the border of an element and neighboring elements. It provides external spacing around the box.
 - YOU can set margin using properties like margin-top, margin-right, margin-bottom, and margin-left, or shorthand like margin.
 
+![The Box Model](PROGRAMMING-NOTES/FRONT-ENDENOTES/images/boxmodel.gif)
 - 
