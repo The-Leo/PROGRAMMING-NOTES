@@ -382,7 +382,7 @@ The CSS `float` property is used to control the horizontal alignment and positio
 - When elements are floated, they can affect the layout of their container and other elements. To prevent this, you often need to clear floats.
 - The clear property is used to control how elements interact with floated elements. It can take values like left, right, both, or none.
 
-```
+```css
 .clearfix::after {
   content: "";
   display: table;
