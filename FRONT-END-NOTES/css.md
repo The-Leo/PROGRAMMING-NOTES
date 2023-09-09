@@ -405,3 +405,72 @@ The CSS `float` property is used to control the horizontal alignment and positio
   overflow: hidden; /* or overflow: auto; */
 }
 ```
+
+
+## HOW TO CREATE RESPONSIVE WEBSITES
+
+**MEDIA QUERIES**
+
+Media queries in CSS are a powerful tool for creating responsive web designs that adapt to different devices and screen sizes. They allow you to apply specific styles based on the characteristics of the user's device, such as its width, height, orientation, or resolution.
+
+**Syntax:**
+
+- Media queries are typically written within your CSS stylesheet using the **`@media`** rule, followed by the specific conditions you want to target.
+
+```css
+@media screen and (max-width: 768px) {
+/* CSS styles for screens with a width of 768px or less */
+}
+```
+
+In this example, we're using a media query to target screens with a maximum width of 768 pixels.
+
+**Conditions:**
+
+- Media queries can be based on various conditions, including:
+    - **`width`** and **`height`** of the viewport.
+    - **`min-width`** and **`max-width`** to define a range of widths.
+    - **`orientation`** to target portrait or landscape mode.
+    - **`resolution`** to specify screen resolution.
+    - **`color`**, **`color-index`**, **`monochrome`**, and more for specific device features.
+
+**Combining Conditions:**
+
+- You can combine multiple conditions within a media query using **`and`**, **`not`**, and **`only`**.
+
+```css
+@media screen and (max-width: 768px) and (orientation: portrait) {
+/* CSS styles for screens meeting both conditions */
+}
+```
+
+**Applying Styles:**
+
+- Within the media query block, you can define the CSS styles that should apply when the conditions are met.
+- This allows you to adjust fonts, layout, and other design aspects for different devices and screen sizes.
+
+```css
+@media screen and (max-width: 768px) {
+	body {
+		font-size: 16px;
+		}
+}
+```
+
+**Fallback Styles:**
+
+- Always consider providing default styles outside of media queries. These styles will apply to devices that don't match any media query conditions, ensuring a consistent user experience.
+
+```css
+/* Default styles for all devices */
+body {
+font-size: 18px;
+}
+```
+
+**Typical Device Widths**
+
+- Mobile Devices:  — 480px
+- iPads and Tablets: 481px — 1200px
+- Laptops: 1201px — 1600px
+- Desktops: 1601px and more
