@@ -2,11 +2,14 @@
 
 ## Resources You may need**
 [diffchecker.com](http://diffchecker.com/) - Checks the difference between codes
+
 [picsum.photos](http://picsum.photos/) - Generates random pictures for your dummy projects
+
 [Mozilla Developer Network](https://developer.mozilla.org/)
 
 ### VS Code extensions to preview
 Live Preview
+
 Prettier
 
 # Hyper Text Markup Language (HTML)
@@ -34,8 +37,8 @@ HTML, which stands for Hypertext Markup Language, is the standard markup languag
 ## Tags
 **Tag** is a fundamental element used to define and structure content on a web page. HTML tags are enclosed in angle brackets < > and come in pairs: an opening tag and a closing tag. They are used to describe the type and purpose of elements on a web page.
 
-Tags - <h1> - opening tag
-</h1> closing tag
+Tags - ```<h1>``` - opening tag
+```</h1>``` closing tag
 
 ## Elements
 An HTML element typically consists of an opening tag, content, and a closing tag. Elements are fundamental building blocks used to create the structure and content of web pages. 
@@ -158,7 +161,7 @@ In this example, the `<main>` element encapsulates the primary content of the we
 ```
 <h1>Heading</h1>
 ```
-This ranges from <h1> to <h6>
+This ranges from ```<h1>``` to ```<h6>```
 
 Do not go beyond h6.
 
