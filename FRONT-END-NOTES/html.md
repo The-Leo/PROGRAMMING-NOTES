@@ -54,7 +54,7 @@ Add this declaration as the first line of the code.
 ## THE HTML ELEMENT 
 The `<html>` element is the root element of an HTML document. It encloses all the content that should be treated as HTML on a web page. Every HTML document must start with an opening `<html>` tag and end with a closing `</html>` tag. The entire structure of the HTML document is contained within these tags.
 
-```
+```html
 <html>
 
 </html>
@@ -63,7 +63,7 @@ The `<html>` element is the root element of an HTML document. It encloses all th
 ## THE HEAD ELEMENT
 The `<head>` element is an essential part of an HTML document, and it is used to provide **metadata** and other non-visible information about the web page. It contains elements that provide instructions to browsers and search engines, as well as information that helps enhance the accessibility and presentation of the content.
 
-```
+```html
 <head>
 
 </head>
@@ -71,27 +71,27 @@ The `<head>` element is an essential part of an HTML document, and it is used to
 
 **Title:** The `<title>` element is used to define the title of the web page. It appears in the browser's title bar or tab and is also used by search engines to display the title of the page in search results.
 
-```
+```html
 <title>title of page</title>
 
 ```
 
 **Metadata:** The `<meta>` element is used to provide metadata about the HTML document. This includes character encoding, author information, description, and keywords. One commonly used attribute is `charset`, which defines the character encoding for the document.
 
-```
+```html
 <meta charset="UTF-8" />
 ```
 
 **Viewport Configuration:** The `<meta>` element can also be used to configure the viewport settings, especially for responsive design and mobile devices. This is done using the `viewport` meta tag.
 
-```
+```html
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 ```
 
 **External Resources:** The `<link>` element is used to link external resources such as stylesheets (CSS) and web fonts to the HTML document. It's typically placed within the `<head>` to ensure proper styling and font loading.
 
-```
+```html
 <head>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
@@ -101,7 +101,7 @@ The `<head>` element is an essential part of an HTML document, and it is used to
 
 **Favicon:** The `<link>` element can also be used to define the favicon for the web page, which is the small icon displayed in the browser tab or bookmark bar.
 
-```
+```html
 <head>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
@@ -158,7 +158,7 @@ In this example, the `<main>` element encapsulates the primary content of the we
 
 ## THE HEADER ELEMENT
 
-```
+```html
 <h1>Heading</h1>
 ```
 This ranges from ```<h1>``` to ```<h6>```
@@ -225,23 +225,23 @@ In this example, the `<section>` elements are used to group content sections wit
 
 ## THE PARAGRAPH ELEMENT
 
-```
+```html
 <p> This is a paragraph </p>
 ```
 
 ## VOID ELEMENTS
 
-```
+```html
 <hr /> - Horizontal rule element - Draws a line in between paragraph
 ```
 
-```
+```html
 <br /> - breaks to a new line
 ```
 
 ## ORDERED AND UNORDERED LISTS
 
-```
+```html
 <ul>
 	<li>List1</li>
 	<li>List 2</li>
@@ -258,7 +258,7 @@ In this example, the `<section>` elements are used to group content sections wit
 
 You can determine the value number of the list with the value attribute
 
-```
+```html
 <li value="2">Item</li>
 
 ```
@@ -267,7 +267,7 @@ This will ensure that the list is numbered at 2.
 
 **NESTING AND INDENTATION**
 
-```
+```html
     <h2>A Complex Nested List</h2>
     <ul>
         <li>A</li>
@@ -303,14 +303,14 @@ Indentation aids you to see code clearly. It gives a good visual feel of your co
 
 ## ANCHOR ELEMENTS
 
-```
+```html
 <a>Text</a>
 
 ```
 
 Anchor elements can take attributes
 
-```
+```html
 <a href = "Link">Text to link</a>
 
 ```
@@ -321,7 +321,7 @@ The attributes go in the opening tag. The value of the attribute should be in qu
 
 This cause the link to open in a new tab
 
-```
+```html
 <a href="actual link" target="_blank">text for link<a/>
 
 ```
@@ -334,7 +334,7 @@ https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol
 
 [picsum.photos](http://picsum.photos/) This site give random photos.
 
-```
+```html
 <img src="url" alt="description of image" />
 
 ```
@@ -345,7 +345,7 @@ the alt attribute is a good practice to aid screen readers.
 
 ## IMAGE AS A LINK**
 
-```
+```html
 <a href="link_image_will_lead_to"><img src="image_link" alt ="image_description" width=""/></a>
 
 ```
@@ -356,7 +356,7 @@ The `<figure>` element is an HTML5 semantic element used to encapsulate a piece 
 
 The `<figure>` element is often used in combination with the `<figcaption>` element, which is placed inside the `<figure>` element and provides the caption or description for the associated content. Here's how the `<figure>` element is structured:
 
-```
+```html
 <figure>
   <img src="image.jpg" alt="Description of the image">
   <figcaption>This is the caption for the image.</figcaption>
@@ -384,7 +384,7 @@ Within the project directory, you will find another directory usually called *pu
 
 ## HTML BOILER PLATE
 
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -403,11 +403,11 @@ Within the project directory, you will find another directory usually called *pu
 
 ## EMPHASIS AND STRONG ELEMENT
 
-```
+```html
 <em>Emphasis</em>
 ```
 
-```
+```html
 <strong>bold</strong>
 ```
 
@@ -423,7 +423,7 @@ Used to demarcate sections
 
 Used to demarcate a section for a form
 
-```
+```html
 <form>
 </form>
 ```
@@ -432,8 +432,8 @@ Used to demarcate a section for a form
 
 The `action` attribute is used in HTML `<form>` elements to specify the URL or endpoint to which the data from the form should be submitted when the user submits the form. This attribute defines the server-side script or program that will process the form data and generate a response based on the provided input.
 
-```
-<form action="hyperspace.com">
+```html
+<form action="hyperspacecode.com">
 </form>
 ```
 
@@ -441,7 +441,7 @@ The `action` attribute is used in HTML `<form>` elements to specify the URL or e
 
 The `input` element allows you several ways to collect data from a web form. It is usually nested in the form element.
 
-```
+```html
 <form>
 <input />
 </form>
@@ -449,7 +449,7 @@ The `input` element allows you several ways to collect data from a web form. It 
 
 There are many kinds of inputs you can create using the `type` attribute. You can easily create a password field, reset button, or a control to let users select a file from their computer.
 
-```
+```html
 <form>
 <input type="text" />
 </form>
@@ -459,7 +459,7 @@ In order for a form's data to be accessed by the location specified in the `acti
 
 **Placeholder text** is used to give people a hint about what kind of information to enter into an input.
 
-```
+```html
 <input type="text" name="email" placeholder="url"/>
 ```
 
@@ -481,8 +481,8 @@ Even though you added your button below the text input, they appear next to each
 
 The button you added will submit the form by default. However, relying on default behavior may cause confusion. Add the `type` attribute with the value `submit` to the `button` to make it clear that it is a submit button.
 
-```
-<form action="hyperspace.com">
+```html
+<form action="hyperspacecode.com">
 <input type="text" name="email" placeholder="text" required/>
 <button type="submit">Submit</button>
 
@@ -494,7 +494,7 @@ The button you added will submit the form by default. However, relying on defaul
 
 You can use radio buttons for questions where you want only one answer out of multiple options.
 
-```
+```html
 <input type="radio" /> Text
 <input type="radio" /> Anothertext
 
@@ -520,7 +520,7 @@ If you select the `Indoor` radio button and submit the form, the form data for t
 
 Add a `value` attribute to both radio buttons. For convenience, set the button's `value` attribute to the same value as its `id` attribute.
 
-```
+```html
 <input id="indoor" type="radio" name="samevalue" value="indoor"/> Indoor
 <input id="outdoor" type="radio" name="samevalue" value="outdoor"/> Anothertext
 
@@ -530,7 +530,7 @@ Add a `value` attribute to both radio buttons. For convenience, set the button's
 
 `label` elements are used to help associate the text for an `input` element with the `input` element itself (especially for assistive technologies like screen readers). For example, `<label><input type="radio"> cat</label>` makes it so clicking the word `cat` also selects the corresponding radio button.
 
-```
+```html
 <label><input type="radio"/>Text </label>
 
 ```
@@ -539,7 +539,7 @@ Add a `value` attribute to both radio buttons. For convenience, set the button's
 
 The `id` attribute is used to identify specific HTML elements. Each `id` attribute's value must be unique from all other `id` values for the entire page.
 
-```
+```html
 <label><input type="radio" id="indoor" /></label>
 
 ```
@@ -548,7 +548,7 @@ The `id` attribute is used to identify specific HTML elements. Each `id` attribu
 
 The `fieldset` element is used to group related inputs and labels together in a web form. `fieldset` elements are *block-level elements*, meaning that they appear on a new line.
 
-```
+```html
 <fieldset>
     <input type="radio" name="samevalue" value="indoor"/> Indoor
     <input type="radio" name="samevalue" value="outdoor"/> Anothertext
@@ -560,7 +560,7 @@ The `fieldset` element is used to group related inputs and labels together in a 
 
 The `legend` element acts as a caption for the content in the `fieldset` element. It gives users context about what they should enter into that part of the form.
 
-```
+```html
 <fieldset>
     <legend>content</legend>
     <input type="radio" name="samevalue" value="indoor"/> Indoor
@@ -577,7 +577,7 @@ Forms commonly use checkboxes for questions that may have more than one answer. 
 
 There's another way to associate an input element's text with the element itself. You can nest the text within a label element and add a for attribute with the same value as the input element's id attribute.
 
-```
+```html
 <input type="checkbox" id="loving" /> <label for="loving">Loving </label>
 
 ```
@@ -586,14 +586,14 @@ There's another way to associate an input element's text with the element itself
 
 In order to make a checkbox checked or radio button selected by default, you need to add the `checked` attribute to it. There's no need to set a value to the `checked` attribute. Instead, just add the word `checked` to the `input` element, making sure there is space between it and other attributes.
 
-```
+```html
 <input id="id_value" type="radio" value="id_value" name="name_value" checked /><label for="id_value">Text</label>
 
 ```
 
 **THE FOOTER ELEMENT**
 
-```
+```html
 <footer>
 <p>text <a href="link">TEXT WHICH IS A LINK</a></p>
 </footer>
